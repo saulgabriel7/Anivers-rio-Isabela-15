@@ -28,7 +28,7 @@ button{
 
 .entrar{
     border: none;
-    position: fixed;
+    position: absolute;
     top: 58%;
     left: 50%;
     transform: translate(-50%);
