@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cardo", serif;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background-image: url('../img/img-desktop-home.png'); /* Imagem padrão para desktop */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+a{
+    text-decoration: none;
+
+}
+
+button{
+    border: none;
+}
+
+.entrar{
+    border: none;
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px;
+    border-radius: 35px;
+    background-color: var(--green-button);
+}
+
+.entrar a {
+    font-size: 20px;
+    color: var(--title-color);
+}
+
+/* Quando a tela for menor que 768px*/
+@media (max-width: 768px) {
+    body {
+        background-image: url('../img/img-mobile-home.png'); /* Imagem para mobile */
+    }
+
+    .entrar a{
+        font-size: 15px;
+    }
+}

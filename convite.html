@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador para a Festa</title>
+    <link rel="stylesheet" href="css/convite.css">
+    <script src="main.js" defer ></script>
+</head>
+<body>
+
+    <header>
+            <a class="vol" href="./index.html">
+                <img src="./img/arrow-left-bold.png" alt="flexa">
+            </a>
+    </header>
+    
+
+    <main class="container">
+        <div class="contador">
+            <div>
+                <div class="time-box" id="dias">00</div>
+                <div class="label">DIAS</div>
+            </div>
+            <div>
+                <div class="time-box" id="horas">00</div>
+                <div class="label">HORAS</div>
+            </div>
+            <div>
+                <div class="time-box" id="minutos">00</div>
+                <div class="label">MINUTOS</div>
+            </div>
+            <div>
+                <div class="time-box" id="segundos">00</div>
+                <div class="label">SEGUNDOS</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="actions">
+                <div class="btn-container">
+                    <button class="btn">
+                        <a href="https://forms.gle/5e5WwWW73RuUmRr16">
+                            Confirmar Presença
+                        </a>
+                    </button>
+                    <button class="btn " onclick="openModal()">
+                        Dicas de Presente 🎁
+                    </button>
+                    <button class="btn">
+                        <a href="https://maps.app.goo.gl/rNSojsNU41jGsXzs8">
+                            Local 🌍📍
+                        </a>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- MODAL -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2 class="modal-title">Dicas de Presente 🎁</h2>
+                    <div class="modal-body">
+                        <p><strong>Tamanho de roupa:</strong> P ou M</p>
+                        <p><strong>Número de sapato:</strong> 38</p>
+                        <p><strong>Perfume favorito:</strong> Egeo</p>
+                    </div>
+                </div>
+            </div>
+        
+            <hr>
+        
+            <h2 class="pix-title">Quer presentear? Faça um Pix! 🎁</h2>
+            <div class="pix-box">
+                <input type="text" value="56046989892" id="pixKey" readonly>
+                <button class="copy-btn" onclick="copiarPix()">Copiar Chave Pix</button>
+                <p class="copied-message" id="copiedMessage">Chave copiada!</p>
+            </div>
+        </div>
+        
+    </main>
+    
+</body>
+</html>

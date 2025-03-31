@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cardo", serif;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background-image: url('../img/img-desktop-pgprincipal.png'); /* Desktop */
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Ajuste do main para Desktop */
+main {
+    position: relative;
+    top: 110vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 235px;
+}
+
+.vol {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    padding: 15px;
+    background-color: #e0ad4c;
+    border-radius: 25px;
+}
+
+.vol img {
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.time-box {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #f5e6c8;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.label {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #f5e6c8;
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
+}
+
+.copied-message {
+    display: none;
+}
+
+/* Estilização dos botões */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #f4c35c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+    flex: 1;
+}
+
+.btn:hover {
+    background-color: #e0ad4c;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff5733;
+}
+
+.close:hover {
+    color: #d42a00;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Estilização do campo PIX */
+hr {
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+
+.pix-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pix-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pix-box input {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.copy-btn {
+    background-color: #f4c35c;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.copy-btn:hover {
+    background-color: #e0ad4c;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    body {
+        background-image: url('../img/img-mobile-pgprincipal.png'); /* Mobile */
+        background-position: unset;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    main {
+        position: relative;
+        top: 95vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 150px;
+    }
+}
