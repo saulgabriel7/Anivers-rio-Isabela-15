@@ -125,7 +125,7 @@ main {
 
 /* MODAL */
 .modal {
-    display: none;
+    display: none; /* Somente isso */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -133,7 +133,6 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -229,7 +228,7 @@ hr {
     body {
         background-image: url('../img/img-mobile-pgprincipal.png'); /* Mobile */
         background-position: unset;
-        min-height: 100vh;
+        height: 100vh;
         width: 100%;
     }
 
@@ -244,6 +243,31 @@ hr {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding-bottom: 150px;
+        padding-bottom: 135px;
+    }
+}
+
+
+/* Ajuste para Mobile < 400px */
+@media (max-width: 380px) {
+    body {
+        background-image: url('../img/img-mobile-pgprincipal.png'); /* Mobile */
+        background-position: unset;
+        height: 100vh;
+        width: 100%;
+    }
+
+    main {
+        position: relative;
+        top: 115vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 120px;
     }
 }
