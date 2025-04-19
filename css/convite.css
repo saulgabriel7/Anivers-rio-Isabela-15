@@ -247,6 +247,11 @@ hr {
     }
 }
 
+.modal a{
+    padding: 10px;
+    color: #f4c35c;
+}
+
 
 /* Ajuste para Mobile < 400px */
 @media (max-width: 380px) {
